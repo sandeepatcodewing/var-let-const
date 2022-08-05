@@ -6,7 +6,7 @@ if(true){
 
 console.log(a);
 
-let b = "best";
-let b = "bye"
+// let b = "best";
+// let b = "bye"
 
-console.log(b);
+// console.log(b);
