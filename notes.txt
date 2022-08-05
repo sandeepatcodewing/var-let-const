@@ -1,0 +1,63 @@
+VAR:
+Var is globally scoped or as you can it be accessed from any where but if it's mentioned inside a function then it can only be accessed within that function. If we try to access it outside the function then it will be not possible.
+
+EXAMPLE NO - 1: 
+
+var fruits = "apple";
+
+function myFunction(){
+	var veggie = "cauliflower";
+}
+
+In above example, it can be seen that there is two variable mentioned as "fruits" and "veggie" respectively. If we try to access the variable name "fruits" inside a function myFunction() then it can be accessed as it is outside the function but if we tried to access the variable name "veggie" outside the function it show error because as per the nature of variable i.e variable that is mentioned inside the function is not globally accessible.
+
+Problem with
+VAR
+
+If we redefined variable, the second defined variable will overwrite the first declared value    
+
+EXAMPLE NO - 2:
+
+var fruits = "apple";
+
+function myFunction(){
+
+var fruits = "cauliflower";
+
+console.log(fruits) }
+
+OUTPUT:
+caulifower
+
+LET:
+Let is a block scoped {} which means that when the let is defined inside the block then it is treated as new or you can say it solved the var problem. To be more precise let's see the example
+
+EXAMPLE NO - 3: 
+
+let a = "amazing";
+if(true){
+	let a = "awsome";
+	console.log(a);
+}
+console.log(a);
+
+Output:
+awsome
+amazing
+
+In above example, we can see that a is declared two times, if it was the case of var then it would have overwrite the value of previous var but in context of let it will treat it as new or can say newly defined a. In this case, both a will be printed and no error will be pop-up.
+
+Let is now used over a var as it solved the redefining issue of var. Sometimes developer might mistakenly re-write the same variable name which will affect the other var. But let will popup the error saying: it has already been declared.
+
+EXAMPLE NO - 4:
+
+let b = "best";
+let b = "bye"
+
+console.log(b);
+
+OUTPUT:
+Identifier 'b' has already been declared
+
+
+But as in EXAMPLE NO - 3, if let having same name declared on different scoped it doesn't show any error's.

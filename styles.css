@@ -1,0 +1,16 @@
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+p{
+    color: #606060;
+}
+
+b{
+    color: #000;
+}
+
+code{
+    color: rgb(63, 63, 63);
+    font-weight: bold;
+}

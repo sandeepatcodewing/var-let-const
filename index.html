@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VAR - LET - CONST</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <p>
+      Understanding about
+      <b>VAR</b>
+    </p>
+    <p>VAR: Var is globally scoped or as you can say it can be accessed from any where but if it's mentioned inside a function then it can only be accessed within that function.</p>
+    <h4 id="example-no-1">EXAMPLE NO - 1:</h4>
+    <code>
+      var fruits = "apple";
+      <br />
+      function myFunction(){
+      <br />
+      var veggie = "cauliflower";
+      <br />
+      }
+    </code>
+    <p>
+      In above example, it can be seen that there is two variable mentioned as
+      <code>fruits</code>
+      and
+      <code>veggie</code>
+      respectively. If we try to access the variable name
+      <code>fruits</code>
+      inside a function myFunction() then it can be accessed as it is outside the function but if we tried to access the variable name
+      <code>veggie</code>
+      outside the function, it show's error because as per the nature of variable i.e variable that is mentioned inside the function is not globally accessible.
+    </p>
+
+    <p>
+      Problem with
+      <b>VAR</b>
+    </p>
+
+    <p>If we redefined variable, the second defined variable will overwrite the first declared value</p>
+
+    <h4 id="example-no-2">EXAMPLE NO - 2:</h4>
+    <code>
+      var fruits = "apple";
+      <br />
+      function myFunction(){
+      <br />
+      var fruits = "cauliflower";
+      <br />
+      console.log(fruits) }
+    </code>
+    <h4>OUTPUT:</h4>
+    <code>caulifower</code>
+
+    <hr />
+
+    <p>
+      Understanding about
+      <b>LET</b>
+    </p>
+    Let is a block scoped
+    <code>{}</code>
+    which means that when the let is defined inside the block then it is treated as new or you can say it solved the var problem. To be more precise let's see the example
+    <h4 id="example-no-3">EXAMPLE NO - 3:</h4>
+    <code>
+      let a = "amazing";
+      <br />
+      if(true){
+      <br />
+      let a = "awsome"; console.log(a);
+      <br />
+      }
+      <br />
+      console.log(a);
+    </code>
+    <h4>Output</h4>
+    <code>
+      awsome
+      <br />
+      amazing
+    </code>
+    <p>
+      In above example, we can see that
+      <code>a</code>
+      is declared two times, if it was the case of
+      <code>var</code>
+      then it would have overwrite the value of previous
+      <code>var</code>
+      but in context of
+      <code>let</code>
+      it will treat it as new or can say newly defined
+      <code>a</code>
+      . In this case, both
+      <code>a</code>
+      will be printed and no error will be pop-up.
+      <br />
+      <code>let</code>
+      is now used over a
+      <code>var</code>
+      as it solved the redefining issue of
+      <code>var</code>
+      . Sometimes developer might mistakenly re-write the same variable name which will affect the previous defined
+      <code>var</code>
+      . But
+      <code>let</code>
+      will popup the error saying:
+      <i>it has already been declared</i>. 
+      <h4 id="example-no-4">EXAMPLE NO - 4:</h4> 
+      <code>
+        let b = "best";
+        <br/>
+         let b = "bye"
+         <br/>
+         console.log(b);
+      </code>
+      <h4>OUTPUT:</h4>
+      <code>Identifier 'b' has already been declared</code><br>But as in <a href="#example-no-3">Example No - 3</a>, if <code>let</code> having same name declared on different scoped it doesn't show any error's.
+    </p>
+
+    <script src="var.js"></script>
+    <script src="let.js"></script>
+    <script src="const.js"></script>
+  </body>
+</html>
