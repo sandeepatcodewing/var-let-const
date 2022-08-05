@@ -61,3 +61,6 @@ Identifier 'b' has already been declared
 
 
 But as in EXAMPLE NO - 3, if let having same name declared on different scoped it doesn't show any error's.
+
+CONST:
+Once const is defined it cannot be re-declared or redefine. Other features almost matched with let. Unlike let, it doesn't show any error when you redefine or re-declared the const.
